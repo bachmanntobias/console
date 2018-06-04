@@ -41,5 +41,9 @@ namespace Console
 
             return stats;
         }
+
+        public String Name { get; set; }
+
     }
+
 }

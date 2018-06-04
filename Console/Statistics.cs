@@ -16,5 +16,15 @@ namespace Console
 
         public float Highest { get; set;  }
         public float Lowest { get; set; }
+
+        public String Name { get; set; }
+
+        public enum E
+        {
+            Name = 0,
+            Alter = 12,
+
+        }
+
     }
 }

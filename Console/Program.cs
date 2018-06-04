@@ -16,6 +16,8 @@ namespace Console
             book.AddData(89.5f);
             //System.Console.WriteLine(89.5);
 
+            Table g1 = new Table();
+
             Statistics stats = book.ComputeStatistics();
             System.Console.WriteLine(stats.Average);
             System.Console.WriteLine(stats.Lowest);
