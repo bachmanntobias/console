@@ -6,7 +6,12 @@ namespace Console
 {
     class Statistics
     {
-        public int Average { get; set; }
+        public Statistics()
+        {
+            Highest = 0;
+            Lowest = float.MaxValue;
+        }
+        public float Average { get; set; }
         public float Sum { get; set; }
 
         public float Highest { get; set;  }

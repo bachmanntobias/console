@@ -16,7 +16,6 @@ namespace Console
         public void AddData(float grade)
         {
             grades.Add(grade);
-
         }
 
         List<float> grades;
@@ -25,15 +24,20 @@ namespace Console
         {
             Statistics stats = new Statistics();
             
-            float sum = 0; 
-
+            float sum = 0;
 
             foreach(float a in grades)
             {
+                stats.Highest = Math.Max(a, stats.Highest);
+                stats.Lowest = Math.Min(a, stats.Lowest);
                 sum += a;
             }
 
-            stats.sum = sum;
+            stats.Sum = sum;
+
+            stats.Average = sum / grades.Count;
+
+
 
             return stats;
         }
