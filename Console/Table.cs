@@ -20,5 +20,22 @@ namespace Console
         }
 
         List<float> grades;
+
+        public Statistics ComputeStatistics() 
+        {
+            Statistics stats = new Statistics();
+            
+            float sum = 0; 
+
+
+            foreach(float a in grades)
+            {
+                sum += a;
+            }
+
+            stats.sum = sum;
+
+            return stats;
+        }
     }
 }
