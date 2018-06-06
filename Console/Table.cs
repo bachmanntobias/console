@@ -20,13 +20,13 @@ namespace Console
 
         List<float> grades;
 
-        public Statistics ComputeStatistics() 
+        public Statistics ComputeStatistics()
         {
             Statistics stats = new Statistics();
-            
+
             float sum = 0;
 
-            foreach(float a in grades)
+            foreach (float a in grades)
             {
                 stats.Highest = Math.Max(a, stats.Highest);
                 stats.Lowest = Math.Min(a, stats.Lowest);
@@ -42,8 +42,14 @@ namespace Console
             return stats;
         }
 
-        public String Name { get; set; }
+        private String _name;
+
+        public String Name 
+        {
+            get;
+            set;        
+
+        }
 
     }
-
 }
